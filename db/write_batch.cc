@@ -13,6 +13,7 @@
 //    len: varint32
 //    data: uint8[len]
 
+#include <iostream>
 #include "leveldb/write_batch.h"
 
 #include "db/dbformat.h"
@@ -121,10 +122,13 @@ class MemTableInserter : public WriteBatch::Handler {
   void Put(const Slice& key, const Slice& value) override {
     mem_->Add(sequence_, kTypeValue, key, value);
     sequence_++;
+    std::cout << "Put: key = " << key.ToString() << " sequence = " << sequence_ << std::endl;
   }
   void Delete(const Slice& key) override {
     mem_->Add(sequence_, kTypeDeletion, key, Slice());
     sequence_++;
+    std::cout << "Delete: key = " << key.ToString() << " sequence = " << sequence_ << std::endl;
+
   }
 };
 }  // namespace
