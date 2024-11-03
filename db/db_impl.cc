@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
+#include<iostream>
+
 #include "db/db_impl.h"
 
 #include <algorithm>
@@ -1195,6 +1197,8 @@ void DBImpl::ReleaseSnapshot(const Snapshot* snapshot) {
 
 // Convenience methods
 Status DBImpl::Put(const WriteOptions& o, const Slice& key, const Slice& val) {
+      std::cout << "db?impl.cc 안 put 실행" << std::endl;
+
   return DB::Put(o, key, val);
 }
 
