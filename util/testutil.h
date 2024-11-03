@@ -7,7 +7,7 @@
 
 #include "../third_party/googletest/googlemock/include/gmock/gmock.h"
 #include "../third_party/googletest/googletest/include/gtest/gtest.h"
-#include "helpers/memenv/memenv.h"
+#include "../helpers/memenv/memenv.h"
 #include "../include/leveldb/env.h"
 #include "../include/leveldb/slice.h"
 #include "random.h"

@@ -22,6 +22,11 @@
 #include "../util/random.h"
 #include "../util/testutil.h"
 
+#include "../port/port.h"
+#include "../port/port_example.h"
+#include "../port/thread_annotations.h"
+
+
 namespace leveldb {
 
 // Return reverse of "key".
