@@ -4,10 +4,12 @@ project(leveldb_bench VERSION 0.1.0 LANGUAGES C CXX)
 # C++11 표준 설정
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_EXTENSIONS OFF)
 add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 
 # 디버그 모드 설정
 set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
 
 # LevelDB 경로 설정
 include_directories(
@@ -58,7 +60,7 @@ set(SOURCES
 
     /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/include/leveldb/filter_policy.h
 
-    mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena_test.cc
+    /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena_test.cc
     /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/arena.cc
     /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/bloom_test.cc
     /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/util/bloom.cc
@@ -120,9 +122,12 @@ find_library(GTEST_MAIN_LIBRARY gtest_main HINTS ${GTEST_ROOT}/lib)
 include_directories(${GTEST_ROOT}/include)
 include_directories(${GTEST_ROOT}/googlemock/include)
 
-# 테스트 실행 파일 및 링크 설정
-add_executable(table_test /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/table/table_test.cc)
-target_link_libraries(table_test ${GTEST_LIBRARY} ${GTEST_MAIN_LIBRARY} pthread leveldb)
+# # 테스트 실행 파일 및 링크 설정
+# add_executable(table_test /mnt/c/Users/huj22/source/repos/sp24f/linking_lab/leveldb/table/table_test.cc)
+# target_link_libraries(table_test ${GTEST_LIBRARY} ${GTEST_MAIN_LIBRARY} pthread leveldb)
 
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+# find_package(GTest REQUIRED)
+# include_directories(${GTEST_INCLUDE_DIRS})
+
+# include_directories(${GTEST_INCLUDE_DIRS})
+# include_directories(${GMOCK_INCLUDE_DIRS})

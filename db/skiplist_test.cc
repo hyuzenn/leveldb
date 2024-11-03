@@ -15,6 +15,7 @@
 #include "../util/hash.h"
 #include "../util/random.h"
 #include "../util/testutil.h"
+#include "../util/mutexlock.h"
 
 namespace leveldb {
 
