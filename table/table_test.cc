@@ -2,25 +2,25 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "leveldb/table.h"
+#include "../include/leveldb/table.h"
 
 #include <map>
 #include <string>
 
-#include "gtest/gtest.h"
-#include "db/dbformat.h"
-#include "db/memtable.h"
-#include "db/write_batch_internal.h"
-#include "leveldb/db.h"
-#include "leveldb/env.h"
-#include "leveldb/iterator.h"
-#include "leveldb/options.h"
-#include "leveldb/table_builder.h"
-#include "table/block.h"
-#include "table/block_builder.h"
-#include "table/format.h"
-#include "util/random.h"
-#include "util/testutil.h"
+#include "../third_party/googletest/googletest/include/gtest/gtest.h"
+#include "../db/dbformat.h"
+#include "../db/memtable.h"
+#include "../db/write_batch_internal.h"
+#include "../include/leveldb/db.h"
+#include "../include/leveldb/env.h"
+#include "../include/leveldb/iterator.h"
+#include "../include/leveldb/options.h"
+#include "../include/leveldb/table_builder.h"
+#include "block.h"
+#include "block_builder.h"
+#include "format.h"
+#include "../util/random.h"
+#include "../util/testutil.h"
 
 namespace leveldb {
 

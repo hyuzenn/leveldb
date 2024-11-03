@@ -10,14 +10,17 @@
 #include <set>
 #include <string>
 
-#include "db/dbformat.h"
-#include "db/log_writer.h"
-#include "db/snapshot.h"
-#include "leveldb/db.h"
-#include "leveldb/env.h"
-#include "port/port.h"
-#include "port/thread_annotations.h"
-
+#include "dbformat.h"
+#include "log_writer.h"
+#include "snapshot.h"
+#include "../include/leveldb/db.h"
+#include "../include/leveldb/env.h"
+#include "../port/port.h"
+#include "../port/port_example.h"
+#include "../port/thread_annotations.h"
+#include "../util/coding.h"
+#include "../util/logging.h"
+#include "../util/mutexlock.h"
 namespace leveldb {
 
 class MemTable;
@@ -75,7 +78,7 @@ class DBImpl : public DB {
   friend class DB;
   struct CompactionState;
   struct Writer;
-
+  
   // Information for a manual compaction
   struct ManualCompaction {
     int level;

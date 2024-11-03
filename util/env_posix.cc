@@ -28,13 +28,13 @@
 #include <type_traits>
 #include <utility>
 
-#include "leveldb/env.h"
-#include "leveldb/slice.h"
-#include "leveldb/status.h"
-#include "port/port.h"
-#include "port/thread_annotations.h"
-#include "util/env_posix_test_helper.h"
-#include "util/posix_logger.h"
+#include "../include/leveldb/env.h"
+#include "../include/leveldb/slice.h"
+#include "../include/leveldb/status.h"
+#include "../port/port.h"
+#include "../port/thread_annotations.h"
+#include "env_posix_test_helper.h"
+#include "posix_logger.h"
 
 namespace leveldb {
 

@@ -17,7 +17,7 @@
 #include <sstream>
 #include <thread>
 
-#include "leveldb/env.h"
+#include "../include/leveldb/env.h"
 
 namespace leveldb {
 

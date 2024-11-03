@@ -4,9 +4,9 @@
 
 #include <cstdio>
 
-#include "leveldb/dumpfile.h"
-#include "leveldb/env.h"
-#include "leveldb/status.h"
+#include "../include/leveldb/dumpfile.h"
+#include "../include/leveldb/env.h"
+#include "../include/leveldb/status.h"
 
 namespace leveldb {
 namespace {

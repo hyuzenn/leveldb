@@ -11,13 +11,13 @@
 #if defined(LEVELDB_HAS_PORT_CONFIG_H)
 
 #if LEVELDB_HAS_PORT_CONFIG_H
-#include "port/port_config.h"
+#include "port_config.h"
 #endif  // LEVELDB_HAS_PORT_CONFIG_H
 
 #elif defined(__has_include)
 
 #if __has_include("port/port_config.h")
-#include "port/port_config.h"
+#include "port_config.h"
 #endif  // __has_include("port/port_config.h")
 
 #endif  // defined(LEVELDB_HAS_PORT_CONFIG_H)
@@ -40,7 +40,7 @@
 #include <mutex>  // NOLINT
 #include <string>
 
-#include "port/thread_annotations.h"
+#include "thread_annotations.h"
 
 namespace leveldb {
 namespace port {

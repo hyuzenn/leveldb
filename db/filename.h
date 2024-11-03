@@ -10,9 +10,9 @@
 #include <cstdint>
 #include <string>
 
-#include "leveldb/slice.h"
-#include "leveldb/status.h"
-#include "port/port.h"
+#include "../include/leveldb/slice.h"
+#include "../include/leveldb/db.h"
+#include "../port/port.h"
 
 namespace leveldb {
 

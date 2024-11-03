@@ -19,10 +19,11 @@
 #include <set>
 #include <vector>
 
-#include "db/dbformat.h"
-#include "db/version_edit.h"
-#include "port/port.h"
-#include "port/thread_annotations.h"
+#include "dbformat.h"
+#include "version_edit.h"
+#include "../port/port.h"
+#include "../port/thread_annotations.h"
+#include "../port/port_example.h"
 
 namespace leveldb {
 
@@ -178,8 +179,8 @@ class VersionSet {
   // current version.  Will release *mu while actually writing to the file.
   // REQUIRES: *mu is held on entry.
   // REQUIRES: no other thread concurrently calls LogAndApply()
-  Status LogAndApply(VersionEdit* edit, port::Mutex* mu)
-      EXCLUSIVE_LOCKS_REQUIRED(mu);
+  Status LogAndApply(VersionEdit* edit, port::Mutex* mu);
+      //EXCLUSIVE_LOCKS_REQUIRED(mu);
 
   // Recover the last saved descriptor from persistent storage.
   Status Recover(bool* save_manifest);

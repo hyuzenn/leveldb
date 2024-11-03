@@ -7,10 +7,11 @@
 // specific port_<platform>.h file.  Use this file as a reference for
 // how to port this package to a new platform.
 
-#ifndef STORAGE_LEVELDB_PORT_PORT_EXAMPLE_H_
+#ifndef STORAGE_LEVELDB_PORT_PORT_EXAMPLE_H_  // 포함 가드 추가
 #define STORAGE_LEVELDB_PORT_PORT_EXAMPLE_H_
 
-#include "port/thread_annotations.h"
+#include "thread_annotations.h"
+#include <iostream>
 
 namespace leveldb {
 namespace port {
@@ -117,4 +118,4 @@ uint32_t AcceleratedCRC32C(uint32_t crc, const char* buf, size_t size);
 }  // namespace port
 }  // namespace leveldb
 
-#endif  // STORAGE_LEVELDB_PORT_PORT_EXAMPLE_H_
+#endif  // STORAGE_LEVELDB_PORT_PORT_EXAMPLE_H_  // 포함 가드 끝

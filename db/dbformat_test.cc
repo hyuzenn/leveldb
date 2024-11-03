@@ -2,10 +2,10 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "db/dbformat.h"
+#include "dbformat.h"
 
-#include "gtest/gtest.h"
-#include "util/logging.h"
+#include "../../gtest/gtest.h"
+#include "../util/logging.h"
 
 namespace leveldb {
 

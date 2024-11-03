@@ -4,17 +4,17 @@
 
 #include <sys/types.h>
 
-#include "gtest/gtest.h"
-#include "db/db_impl.h"
-#include "db/filename.h"
-#include "db/log_format.h"
-#include "db/version_set.h"
-#include "leveldb/cache.h"
-#include "leveldb/db.h"
-#include "leveldb/table.h"
-#include "leveldb/write_batch.h"
-#include "util/logging.h"
-#include "util/testutil.h"
+#include "../../gtest/gtest.h"
+#include "db_impl.h"
+#include "filename.h"
+#include "log_format.h"
+#include "version_set.h"
+#include "../include/leveldb/cache.h"
+#include "../include/leveldb/db.h"
+#include "../include/leveldb/table.h"
+#include "../include/leveldb/write_batch.h"
+#include "../util/logging.h"
+#include "../util/testutil.h"
 
 namespace leveldb {
 

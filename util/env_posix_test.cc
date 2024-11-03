@@ -13,11 +13,11 @@
 #include <unordered_set>
 #include <vector>
 
-#include "gtest/gtest.h"
-#include "leveldb/env.h"
-#include "port/port.h"
-#include "util/env_posix_test_helper.h"
-#include "util/testutil.h"
+#include "../../gtest/gtest.h"
+#include "../include/leveldb/env.h"
+#include "../port/port.h"
+#include "env_posix_test_helper.h"
+#include "testutil.h"
 
 #if HAVE_O_CLOEXEC
 

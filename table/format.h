@@ -8,9 +8,9 @@
 #include <cstdint>
 #include <string>
 
-#include "leveldb/slice.h"
-#include "leveldb/status.h"
-#include "leveldb/table_builder.h"
+#include "../include/leveldb/slice.h"
+#include "../include/leveldb/status.h"
+#include "../include/leveldb/table_builder.h"
 
 namespace leveldb {
 

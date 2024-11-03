@@ -3,10 +3,10 @@
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
 #include "gtest/gtest.h"
-#include "leveldb/filter_policy.h"
-#include "util/coding.h"
-#include "util/logging.h"
-#include "util/testutil.h"
+#include "../include/leveldb/filter_policy.h"
+#include "coding.h"
+#include "logging.h"
+#include "testutil.h"
 
 namespace leveldb {
 
