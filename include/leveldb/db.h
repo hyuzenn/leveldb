@@ -11,7 +11,6 @@
 #include "export.h"
 #include "iterator.h"
 #include "options.h"
-
 namespace leveldb {
 
 // Update CMakeLists.txt if you change these

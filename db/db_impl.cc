@@ -1199,8 +1199,6 @@ void DBImpl::ReleaseSnapshot(const Snapshot* snapshot) {
 
 // Convenience methods
 Status DBImpl::Put(const WriteOptions& o, const Slice& key, const Slice& val) {
-      std::cout << "db?impl.cc 안 put 실행" << std::endl;
-
   return DB::Put(o, key, val);
 }
 
