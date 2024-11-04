@@ -1206,6 +1206,8 @@ Status DBImpl::Delete(const WriteOptions& options, const Slice& key) {
   return DB::Delete(options, key);
 }
 
+
+
 Status DBImpl::Write(const WriteOptions& options, WriteBatch* updates) {
   Writer w(&mutex_);
   w.batch = updates;
@@ -1489,6 +1491,7 @@ void DBImpl::GetApproximateSizes(const Range* range, int n, uint64_t* sizes) {
 
 // Default implementations of convenience methods that subclasses of DB
 // can call if they wish
+/*
 Status DB::Put(const WriteOptions& opt, const Slice& key, const Slice& value) {
   WriteBatch batch;
   batch.Put(key, value);
@@ -1500,6 +1503,8 @@ Status DB::Delete(const WriteOptions& opt, const Slice& key) {
   batch.Delete(key);
   return Write(opt, &batch);
 }
+*/
+
 
 DB::~DB() = default;
 

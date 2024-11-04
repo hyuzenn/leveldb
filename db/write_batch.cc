@@ -120,9 +120,9 @@ class MemTableInserter : public WriteBatch::Handler {
   MemTable* mem_;
 
   void Put(const Slice& key, const Slice& value) override {
-    std::cout << "Inside DBImpl::Put, key = " << key.ToString() << ", value = " << value.ToString() << std::endl;
     mem_->Add(sequence_, kTypeValue, key, value);
     sequence_++;
+    std::cout << "Inside DBImpl::Put, key = " << key.ToString() << ", value = " << value.ToString() << std::endl;
 }
 
   void Delete(const Slice& key) override {
