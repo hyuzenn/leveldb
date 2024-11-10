@@ -121,15 +121,14 @@ class MemTableInserter : public WriteBatch::Handler {
 
   void Put(const Slice& key, const Slice& value) override {
     mem_->Add(sequence_, kTypeValue, key, value);
+    std::cout << "Put, key = " << key.ToString() << ", sequence = " << sequence_ << std::endl;
     sequence_++;
-    std::cout << "Inside DBImpl::Put, key = " << key.ToString() << ", value = " << value.ToString() << std::endl;
 }
 
   void Delete(const Slice& key) override {
     mem_->Add(sequence_, kTypeDeletion, key, Slice());
-    sequence_++;
     std::cout << "Delete: key = " << key.ToString() << " sequence = " << sequence_ << std::endl;
-
+    sequence_++;
   }
 };
 }  // namespace
