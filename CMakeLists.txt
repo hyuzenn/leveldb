@@ -273,9 +273,10 @@ endif(HAVE_CLANG_THREAD_SAFETY)
 if(HAVE_CRC32C)
   target_link_libraries(leveldb crc32c)
 endif(HAVE_CRC32C)
-if(HAVE_SNAPPY)
-  target_link_libraries(leveldb snappy)
-endif(HAVE_SNAPPY)
+
+
+target_link_libraries(leveldb snappy)
+
 if(HAVE_ZSTD)
   target_link_libraries(leveldb zstd)
 endif(HAVE_ZSTD)
