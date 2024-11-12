@@ -8,8 +8,7 @@
 #include <cstddef>
 #include <cstdint>
 
-#include "../include/leveldb/iterator.h"
-
+#include "leveldb/iterator.h"
 
 namespace leveldb {
 

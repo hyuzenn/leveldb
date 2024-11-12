@@ -7,8 +7,6 @@
 
 #include <cstddef>
 #include <cstdint>
-#include "../port/port.h"
-
 
 namespace leveldb {
 namespace crc32c {

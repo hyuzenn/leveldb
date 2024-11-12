@@ -2,12 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "../../gtest/gtest.h"
-#include "memtable.h"
-#include "write_batch_internal.h"
-#include "../include/leveldb/db.h"
-#include "../include/leveldb/env.h"
-#include "../util/logging.h"
+#include "gtest/gtest.h"
+#include "db/memtable.h"
+#include "db/write_batch_internal.h"
+#include "leveldb/db.h"
+#include "leveldb/env.h"
+#include "util/logging.h"
 
 namespace leveldb {
 

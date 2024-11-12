@@ -7,9 +7,8 @@
 
 #include <cstdint>
 
-#include "dbformat.h"
-#include "../include/leveldb/db.h"
-
+#include "db/dbformat.h"
+#include "leveldb/db.h"
 
 namespace leveldb {
 

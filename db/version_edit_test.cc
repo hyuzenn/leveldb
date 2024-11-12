@@ -2,9 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "version_edit.h"
+#include "db/version_edit.h"
 
-#include "../../gtest/gtest.h"
+#include "gtest/gtest.h"
 
 namespace leveldb {
 

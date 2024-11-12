@@ -2,9 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include<iostream>
-
-#include "db_impl.h"
+#include "db/db_impl.h"
 
 #include <algorithm>
 #include <atomic>
@@ -14,30 +12,28 @@
 #include <string>
 #include <vector>
 
-#include "builder.h"
-#include "db_iter.h"
-#include "dbformat.h"
-#include "filename.h"
-#include "log_reader.h"
-#include "log_writer.h"
-#include "memtable.h"
-#include "table_cache.h"
-#include "version_set.h"
-#include "write_batch_internal.h"
-#include "../include/leveldb/db.h"
-#include "../include/leveldb/env.h"
-#include "../include/leveldb/status.h"
-#include "../include/leveldb/table.h"
-#include "../include/leveldb/table_builder.h"
-#include "../port/port.h"
-#include "../port/port_example.h"
-#include "../port/thread_annotations.h"
-#include "../table/block.h"
-#include "../table/merger.h"
-#include "../table/two_level_iterator.h"
-#include "../util/coding.h"
-#include "../util/logging.h"
-#include "../util/mutexlock.h"
+#include "db/builder.h"
+#include "db/db_iter.h"
+#include "db/dbformat.h"
+#include "db/filename.h"
+#include "db/log_reader.h"
+#include "db/log_writer.h"
+#include "db/memtable.h"
+#include "db/table_cache.h"
+#include "db/version_set.h"
+#include "db/write_batch_internal.h"
+#include "leveldb/db.h"
+#include "leveldb/env.h"
+#include "leveldb/status.h"
+#include "leveldb/table.h"
+#include "leveldb/table_builder.h"
+#include "port/port.h"
+#include "table/block.h"
+#include "table/merger.h"
+#include "table/two_level_iterator.h"
+#include "util/coding.h"
+#include "util/logging.h"
+#include "util/mutexlock.h"
 
 namespace leveldb {
 
@@ -1489,7 +1485,6 @@ void DBImpl::GetApproximateSizes(const Range* range, int n, uint64_t* sizes) {
 
 // Default implementations of convenience methods that subclasses of DB
 // can call if they wish
-/*
 Status DB::Put(const WriteOptions& opt, const Slice& key, const Slice& value) {
   WriteBatch batch;
   batch.Put(key, value);
@@ -1501,8 +1496,6 @@ Status DB::Delete(const WriteOptions& opt, const Slice& key) {
   batch.Delete(key);
   return Write(opt, &batch);
 }
-*/
-
 
 DB::~DB() = default;
 

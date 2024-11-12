@@ -14,8 +14,8 @@
 #include <cstring>
 #include <string>
 
-#include "../include/leveldb/slice.h"
-#include "../port/port.h"
+#include "leveldb/slice.h"
+#include "port/port.h"
 
 namespace leveldb {
 

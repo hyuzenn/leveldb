@@ -2,20 +2,19 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "skiplist.h"
+#include "db/skiplist.h"
 
 #include <atomic>
 #include <set>
 
-#include "../../gtest/gtest.h"
-#include "../include/leveldb/env.h"
-#include "../port/port.h"
-#include "../port/thread_annotations.h"
-#include "../util/arena.h"
-#include "../util/hash.h"
-#include "../util/random.h"
-#include "../util/testutil.h"
-#include "../util/mutexlock.h"
+#include "gtest/gtest.h"
+#include "leveldb/env.h"
+#include "port/port.h"
+#include "port/thread_annotations.h"
+#include "util/arena.h"
+#include "util/hash.h"
+#include "util/random.h"
+#include "util/testutil.h"
 
 namespace leveldb {
 

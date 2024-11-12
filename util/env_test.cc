@@ -2,15 +2,15 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
-#include "../include/leveldb/env.h"
+#include "leveldb/env.h"
 
 #include <algorithm>
 
 #include "gtest/gtest.h"
-#include "../port/port.h"
-#include "../port/thread_annotations.h"
-#include "mutexlock.h"
-#include "testutil.h"
+#include "port/port.h"
+#include "port/thread_annotations.h"
+#include "util/mutexlock.h"
+#include "util/testutil.h"
 
 namespace leveldb {
 

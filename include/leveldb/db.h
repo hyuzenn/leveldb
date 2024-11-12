@@ -8,9 +8,10 @@
 #include <cstdint>
 #include <cstdio>
 
-#include "export.h"
-#include "iterator.h"
-#include "options.h"
+#include "leveldb/export.h"
+#include "leveldb/iterator.h"
+#include "leveldb/options.h"
+
 namespace leveldb {
 
 // Update CMakeLists.txt if you change these

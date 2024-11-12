@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 
-#include "dbformat.h"
+#include "db/dbformat.h"
 
 namespace leveldb {
 

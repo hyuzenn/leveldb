@@ -7,7 +7,7 @@
 
 #include <string>
 
-#include "export.h"
+#include "leveldb/export.h"
 
 namespace leveldb {
 

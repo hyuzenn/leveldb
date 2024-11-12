@@ -7,7 +7,8 @@
 
 #include <cstdint>
 #include <vector>
-#include "../include/leveldb/slice.h"
+
+#include "leveldb/slice.h"
 
 namespace leveldb {
 

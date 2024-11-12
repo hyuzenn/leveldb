@@ -24,14 +24,14 @@
 #include <string>
 #include <vector>
 
-#include "../include/leveldb/env.h"
-#include "../include/leveldb/slice.h"
-#include "../port/port.h"
-#include "../port/thread_annotations.h"
-#include "env_windows_test_helper.h"
-#include "logging.h"
-#include "mutexlock.h"
-#include "windows_logger.h"
+#include "leveldb/env.h"
+#include "leveldb/slice.h"
+#include "port/port.h"
+#include "port/thread_annotations.h"
+#include "util/env_windows_test_helper.h"
+#include "util/logging.h"
+#include "util/mutexlock.h"
+#include "util/windows_logger.h"
 
 namespace leveldb {
 

@@ -15,9 +15,9 @@
 
 #include <cstdint>
 
-#include "export.h"
-#include "options.h"
-#include "status.h"
+#include "leveldb/export.h"
+#include "leveldb/options.h"
+#include "leveldb/status.h"
 
 namespace leveldb {
 
