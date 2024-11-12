@@ -14,7 +14,6 @@
 //    data: uint8[len]
 
 #include <iostream>
-
 #include "dbformat.h"
 #include "memtable.h"
 #include "write_batch_internal.h"
@@ -119,17 +118,17 @@ class MemTableInserter : public WriteBatch::Handler {
   SequenceNumber sequence_;
   MemTable* mem_;
 
-  void Put(const Slice& key, const Slice& value) override {
-    mem_->Add(sequence_, kTypeValue, key, value);
-    std::cout << "Put, key = " << key.ToString() << ", sequence = " << sequence_ << std::endl;
-    sequence_++;
-}
-
-  void Delete(const Slice& key) override {
-    mem_->Add(sequence_, kTypeDeletion, key, Slice());
-    std::cout << "Delete: key = " << key.ToString() << " sequence = " << sequence_ << std::endl;
-    sequence_++;
+    void Put(const Slice& key, const Slice& value) override {
+      mem_->Add(sequence_, kTypeValue, key, value);
+      sequence_++;
+      std::cout << "Put, key = " << key.ToString() << ", sequence = " << sequence_ << std::endl;
   }
+
+    void Delete(const Slice& key) override {
+      mem_->Add(sequence_, kTypeDeletion, key, Slice());
+      sequence_++;
+      std::cout << "Delete: key = " << key.ToString() << " sequence = " << sequence_ << std::endl;
+    }
 };
 }  // namespace
 

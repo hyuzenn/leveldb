@@ -16,7 +16,7 @@
 
 #elif defined(__has_include)
 
-#if __has_include("port/port_config.h")
+#if __has_include("port_config.h")
 #include "port_config.h"
 #endif  // __has_include("port/port_config.h")
 
